@@ -1,10 +1,11 @@
 BananaDetection/
  ├── app.py
- ├── Requirement.txt   
+ ├── requirement.txt   
  ├── templates/
  ├── static/
  ├── data/
  └── README.md
+
 
 
 
