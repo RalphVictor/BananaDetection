@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Banana Ripeness Detection</title>
+  <link rel="icon" href="https://image.freepik.com/free-vector/banana-cartoon-illustration_53734-31.jpg">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+  <div class="container">
+      <div class="header">
+      <h1>BANANA RIPENESS OBJECT DETECTION</h1>
+      <img src="{{ url_for('static', filename='Logo.png') }}" alt="Banana" class="banana-logo">
+    </div>
+    <form id="uploadform" method="post" enctype="multipart/form-data">
+      <div class="button-group">
+        <button type="button" onclick="$('.file-upload-input').trigger('click')">UPLOAD IMAGE</button>
+      </div>
+
+      <div class="upload-area" id="preview-box">
+        <img id="previewImage" src="" alt="Uploaded Preview" style="display: none;">
+        <div class="upload-text" id="placeholderText">UPLOAD A PHOTO</div>
+        <input class="file-upload-input" type="file" id="imgInput" name="image" accept="image/*" onchange="readURL(this);" style="display: none;">
+      </div>
+
+      <button id="submit" type="submit">CLASSIFY IMAGE</button>
+    </form>
+
+    <div class="result-container" style="display: none;">
+      <h2>DETECTION RESULTS</h2>
+      <div class="result">
+        <strong>PREDICTION:</strong> 
+        <span id="resultClassType">NONE</span>
+      </div>
+      <div class="result">
+        <strong>CONFIDENCE:</strong> 
+        <span id="confidenceValue">0%</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='design.js') }}"></script>
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

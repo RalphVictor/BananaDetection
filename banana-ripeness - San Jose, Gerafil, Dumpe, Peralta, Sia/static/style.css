@@ -1,0 +1,302 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background: linear-gradient(135deg, #f5f7fa 0%, #ffe6a7 100%);
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  text-align: center;
+  padding: 40px 20px;
+  max-width: 1000px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.header h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  margin: 0;
+  color: #333;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+  flex-grow: 1;
+  white-space: nowrap;
+}
+
+.banana-logo {
+  width: 150px;
+  height: auto;
+  filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.2));
+  margin-left: 20px;
+}
+
+.button-group {
+  margin: 30px 0;
+}
+
+.button-group button, #submit {
+  background: linear-gradient(to bottom, #ffd700, #e6b800);
+  border: none;
+  padding: 18px 36px;
+  margin: 0 15px;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 1.6rem;
+  cursor: pointer;
+  box-shadow: 0 6px #cc9900;
+  min-width: 280px;
+  text-transform: uppercase;
+  transition: all 0.2s;
+  color: #333;
+}
+
+.button-group button:hover, #submit:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px #cc9900;
+}
+
+.button-group button:active, #submit:active {
+  transform: translateY(2px);
+  box-shadow: 0 4px #cc9900;
+}
+
+.upload-area {
+  border: 4px dashed rgba(0,0,0,0.2);
+  margin: 40px auto;
+  width: 650px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: rgba(255,255,255,0.3);
+  border-radius: 15px;
+  transition: all 0.3s;
+  backdrop-filter: blur(5px);
+}
+
+.upload-area:hover {
+  border-color: rgba(0,0,0,0.3);
+  background-color: rgba(255,255,255,0.4);
+}
+
+.upload-text {
+  font-weight: bold;
+  font-size: 2rem;
+  color: #555;
+}
+
+.file-upload-input {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+#previewImage {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.result-container {
+  background: linear-gradient(to bottom, #ffffff, #e6b800);
+  padding: 30px;
+  border-radius: 15px;
+  margin: 30px auto;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  text-align: center;
+  width: 80%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.result {
+  font-size: 1.8rem;
+  margin: 10px 0;
+  color: #333;
+  width: 100%;
+  text-align: center;
+}
+
+.result strong {
+  color: #5a4a00;
+  font-weight: bold;
+}
+
+#resultClassType, #confidenceValue {
+  display: inline-block;
+  padding: 5px 15px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 8px;
+  margin-left: 10px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 900px) {
+  .header h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .banana-logo {
+    margin-left: 0;
+    margin-top: 15px;
+    align-items: center;
+  }
+  
+  .upload-area {
+    width: 90%;
+    height: 350px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header h1 {
+    font-size: 1.5rem;
+  }
+  
+  .button-group button, #submit {
+    min-width: 200px;
+    font-size: 1.2rem;
+    padding: 12px 24px;
+  }
+}
+.no-banana {
+  color: #ff0000;
+  font-weight: bold;
+}
+
+.result-container {
+  background: linear-gradient(to bottom, #ffffff, #e6b800);
+  padding: 30px;
+  border-radius: 15px;
+  margin: 30px auto;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  text-align: center;
+  width: 80%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.result {
+  font-size: 1.8rem;
+  margin: 10px 0;
+  color: #333;
+  width: 100%;
+  text-align: center;
+}
+
+.result strong {
+  color: #5a4a00;
+  font-weight: bold;
+}
+
+#resultClassType, #confidenceValue {
+  display: inline-block;
+  padding: 5px 15px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 8px;
+  margin-left: 10px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* Mobile scaling - keeps exact same layout but scales down */
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+  
+  .container {
+    transform: scale(0.85);
+    transform-origin: top center;
+    width: 100%;
+    padding: 0;
+  }
+  
+  .header {
+    transform: scale(0.9);
+    transform-origin: top center;
+    margin-bottom: 15px;
+  }
+  
+  .upload-area {
+    margin: 20px auto;
+    transform: scale(0.95);
+  }
+  
+  button, .button-group button, #submit {
+    padding: 14px 28px;
+    font-size: 1.4rem;
+  }
+}
+
+/* For very small phones */
+@media (max-width: 480px) {
+  html {
+    font-size: 12px;
+  }
+  
+  .container {
+    transform: scale(0.75);
+  }
+  
+  .header h1 {
+    font-size: 2rem;
+  }
+  
+  .upload-area {
+    height: 350px;
+  }
+}
+
+/* Prevent body scrolling when zoomed */
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.button-touch {
+  transform: scale(0.95) !important;
+  opacity: 0.9 !important;
+}
+
+/* Make sure all interactive elements are large enough for touch */
+button, input[type="file"], .upload-area {
+  min-height: 44px;
+  min-width: 44px;
+}
