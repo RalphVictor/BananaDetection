@@ -1,16 +1,8 @@
-banana-ripeness - San Jose, Gerafil, Dumpe, Peralta, Sia /
+BananaDetection/
  ├── app.py
- ├── requirements.txt    
- ├── data/
- │   └── detections.json
- ├── static/
- │   ├── app.js
- │   ├── design.js
- │   ├── Logo.png
- │   ├── style.css
- │   └── uploads/
+ ├── requirements.txt   
  ├── templates/
- │   ├── index.html
- │   └── result.html
- ├── README.md
- └── uploads/   ← (you can delete if empty)
+ ├── static/
+ ├── data/
+ └── README.md
+
